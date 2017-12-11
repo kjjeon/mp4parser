@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
         int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         int permissionCheck1 = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
         if (permissionCheck == PackageManager.PERMISSION_GRANTED && permissionCheck1 == PackageManager.PERMISSION_GRANTED ) {
-            Toast.makeText(this, "READ/WRITE 수신권한 주어져 있음", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "READ/WRITE 권한 주어져 있음", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "READ/WRITE 수신권한 없음", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "READ/WRITE 권한 없음", Toast.LENGTH_LONG).show();
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                 //이미 사용자가 한번 거부 했으므로 권환 요청의 필요성을 설명할 필요가 있음
                 Toast.makeText(this, "READ/WRITE 진짜 필요하니깐 주세요. ", Toast.LENGTH_LONG).show();
